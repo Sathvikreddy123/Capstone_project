@@ -1,0 +1,1507 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Admin\\Downloads\\project_final\\playwright.config.ts",
+    "rootDir": "C:/Users/Admin/Downloads/project_final/src",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Admin/Downloads/project_final/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Admin/Downloads/project_final/src",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ],
+      [
+        "C:\\Users\\Admin\\Downloads\\project_final\\node_modules\\@reportportal\\agent-js-playwright\\build\\index.js",
+        {
+          "apiKey": "test3_u9N2Lws1SD2EIieJIFh5Y3ujG3qxCiopE6NU1_PXop8lKPH8oVgWKLBidAOh93mc",
+          "endpoint": "http://localhost:8080/api/v1",
+          "project": "default_personal",
+          "launch": "Launch3",
+          "attributes": [
+            {
+              "key": "agent",
+              "value": "playwright"
+            },
+            {
+              "key": "env",
+              "value": "manual_run"
+            }
+          ],
+          "description": "Playwright Regression Run"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.58.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api\\tests\\product.api.spec.ts",
+      "file": "api/tests/product.api.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Product API Tests",
+          "file": "api/tests/product.api.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should retrieve all products successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "API-PRODUCT-001"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1224,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:57:13.765Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "API-PRODUCT-001"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7d1193d613f41d07b1e9-849817c86bd3f03f4bd0",
+              "file": "api/tests/product.api.spec.ts",
+              "line": 18,
+              "column": 9
+            },
+            {
+              "title": "should search products by term successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "API-PRODUCT-002"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 640,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:57:15.052Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "API-PRODUCT-002"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7d1193d613f41d07b1e9-7225397af8f655d558fc",
+              "file": "api/tests/product.api.spec.ts",
+              "line": 39,
+              "column": 9
+            },
+            {
+              "title": "should retrieve all brands successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "API-PRODUCT-003"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 304,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:57:15.753Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "API-PRODUCT-003"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7d1193d613f41d07b1e9-95f841a0dcaa2282ec93",
+              "file": "api/tests/product.api.spec.ts",
+              "line": 65,
+              "column": 9
+            },
+            {
+              "title": "should return empty results for non-matching search term",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "API-PRODUCT-004"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 619,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:57:16.102Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "API-PRODUCT-004"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7d1193d613f41d07b1e9-719f6eeaa6522c1ea051",
+              "file": "api/tests/product.api.spec.ts",
+              "line": 83,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "api\\tests\\user.api.spec.ts",
+      "file": "api/tests/user.api.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "User API Tests",
+          "file": "api/tests/user.api.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should create user account successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "API-USER-001"
+                    },
+                    {
+                      "type": "api-cleanup",
+                      "description": "Deleted user: create_success_1770800237365_8568@test.com"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 778,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:57:17.085Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "API-USER-001"
+                        },
+                        {
+                          "type": "api-cleanup",
+                          "description": "Deleted user: create_success_1770800237365_8568@test.com"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fe01ea5fe5d5b1edd911-48b90478b059ca7597dc",
+              "file": "api/tests/user.api.spec.ts",
+              "line": 37,
+              "column": 9
+            },
+            {
+              "title": "should login with valid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "API-USER-002"
+                    },
+                    {
+                      "type": "api-cleanup",
+                      "description": "Deleted user: login_valid_1770800238120_6781@test.com"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1280,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:57:18.089Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "API-USER-002"
+                        },
+                        {
+                          "type": "api-cleanup",
+                          "description": "Deleted user: login_valid_1770800238120_6781@test.com"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fe01ea5fe5d5b1edd911-09441be9738ba2e66f66",
+              "file": "api/tests/user.api.spec.ts",
+              "line": 53,
+              "column": 9
+            },
+            {
+              "title": "should delete user account successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "API-USER-003"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 828,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:57:19.407Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "API-USER-003"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fe01ea5fe5d5b1edd911-15a737692390ae7ef30b",
+              "file": "api/tests/user.api.spec.ts",
+              "line": 70,
+              "column": 9
+            },
+            {
+              "title": "should reject duplicate email registration",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "API-USER-004"
+                    },
+                    {
+                      "type": "api-cleanup",
+                      "description": "Deleted user: duplicate_email_1770800240304_8531@test.com"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1019,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:57:20.273Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "API-USER-004"
+                        },
+                        {
+                          "type": "api-cleanup",
+                          "description": "Deleted user: duplicate_email_1770800240304_8531@test.com"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fe01ea5fe5d5b1edd911-88d703668a2b903a6519",
+              "file": "api/tests/user.api.spec.ts",
+              "line": 90,
+              "column": 9
+            },
+            {
+              "title": "should reject login with invalid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "API-USER-005"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 642,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:57:21.338Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "API-USER-005"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fe01ea5fe5d5b1edd911-39f264bbd7bfb84094e0",
+              "file": "api/tests/user.api.spec.ts",
+              "line": 108,
+              "column": 9
+            },
+            {
+              "title": "should reject login with correct email but wrong password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "API-USER-006"
+                    },
+                    {
+                      "type": "api-cleanup",
+                      "description": "Deleted user: wrong_password_1770800242061_8144@test.com"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 912,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:57:22.020Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "API-USER-006"
+                        },
+                        {
+                          "type": "api-cleanup",
+                          "description": "Deleted user: wrong_password_1770800242061_8144@test.com"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fe01ea5fe5d5b1edd911-d9a2122f7bfa14406c8c",
+              "file": "api/tests/user.api.spec.ts",
+              "line": 119,
+              "column": 9
+            },
+            {
+              "title": "should reject registration with missing required fields",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "API-USER-007"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 300,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:57:22.984Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "API-USER-007"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fe01ea5fe5d5b1edd911-ba6f0d65f3b5dd4f3f1f",
+              "file": "api/tests/user.api.spec.ts",
+              "line": 136,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "tests\\checkout\\place-order.spec.ts",
+      "file": "tests/checkout/place-order.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Phase 6: Payment & Order Placement",
+          "file": "tests/checkout/place-order.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should complete end-to-end purchase flow with new user registration",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "TC-16"
+                    },
+                    {
+                      "type": "cleanup",
+                      "description": "Deleted account: order_user_1770800248469@test.com"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 17981,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:57:23.436Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "TC-16"
+                        },
+                        {
+                          "type": "cleanup",
+                          "description": "Deleted account: order_user_1770800248469@test.com"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c490fa08810127084d17-e93bf6fb0db3226f45cb",
+              "file": "tests/checkout/place-order.spec.ts",
+              "line": 52,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "tests\\contact-us\\contact-us.spec.ts",
+      "file": "tests/contact-us/contact-us.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Phase 3: Support Pages",
+          "file": "tests/contact-us/contact-us.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should submit contact form with file upload successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "TC-6"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8334,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:57:41.942Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "TC-6"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "957b96598d43747eed28-2ce286210830896e9c09",
+              "file": "tests/contact-us/contact-us.spec.ts",
+              "line": 17,
+              "column": 9
+            },
+            {
+              "title": "should navigate to test cases page and display header",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "TC-7"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3442,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:57:50.306Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "TC-7"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "957b96598d43747eed28-9255ab10011f042fa483",
+              "file": "tests/contact-us/contact-us.spec.ts",
+              "line": 44,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "tests\\login\\login.spec.ts",
+      "file": "tests/login/login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login Feature",
+          "file": "tests/login/login.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should login successfully with valid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "TC-2"
+                    },
+                    {
+                      "type": "cleanup",
+                      "description": "Deleted account: login_valid_1770800276513@test.com"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 19982,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:57:53.791Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "TC-2"
+                        },
+                        {
+                          "type": "cleanup",
+                          "description": "Deleted account: login_valid_1770800276513@test.com"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d350e7d19bce6460b0e3-6d37c5690d5c22263372",
+              "file": "tests/login/login.spec.ts",
+              "line": 42,
+              "column": 9
+            },
+            {
+              "title": "should show error when logging in with incorrect credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "TC-3"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8901,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:58:13.888Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "TC-3"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d350e7d19bce6460b0e3-cad75fbe622a114f0fc1",
+              "file": "tests/login/login.spec.ts",
+              "line": 74,
+              "column": 9
+            },
+            {
+              "title": "should show error when using valid email with wrong password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "TC-4"
+                    },
+                    {
+                      "type": "cleanup",
+                      "description": "Deleted account: login_wrong_pass_1770800306976@test.com"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 24691,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:58:22.896Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "TC-4"
+                        },
+                        {
+                          "type": "cleanup",
+                          "description": "Deleted account: login_wrong_pass_1770800306976@test.com"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d350e7d19bce6460b0e3-e83900b853a80a7701a1",
+              "file": "tests/login/login.spec.ts",
+              "line": 82,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "tests\\products\\products.spec.ts",
+      "file": "tests/products/products.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Phase 5: Product Interactions",
+          "file": "tests/products/products.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should search and display products matching search term",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "TC-9"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6415,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Found 7 products.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:58:47.640Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "TC-9"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "548df59c705fcb2e9965-ef4ff0bce67d32b7bbbe",
+              "file": "tests/products/products.spec.ts",
+              "line": 15,
+              "column": 9
+            },
+            {
+              "title": "should add multiple products to cart and verify cart count",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "TC-12"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12754,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Vignette detected, attempting to close...\n"
+                        },
+                        {
+                          "text": "Vignette closed via iframe button.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:58:54.085Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "TC-12"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "548df59c705fcb2e9965-cfee3b038f5bbd21231c",
+              "file": "tests/products/products.spec.ts",
+              "line": 26,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "tests\\signup\\signup.spec.ts",
+      "file": "tests/signup/signup.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Signup Feature",
+          "file": "tests/signup/signup.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should create account and auto-login user after successful registration",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "TC-1"
+                    },
+                    {
+                      "type": "cleanup",
+                      "description": "Deleted account: test_user_1770800350819@test.com"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11854,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:59:06.904Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "TC-1"
+                        },
+                        {
+                          "type": "cleanup",
+                          "description": "Deleted account: test_user_1770800350819@test.com"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8c42aaa18f0e06ab6c30-46ed989b7eb3eb7ed5a5",
+              "file": "tests/signup/signup.spec.ts",
+              "line": 43,
+              "column": 9
+            },
+            {
+              "title": "should show error when registering with existing email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "TC-5"
+                    },
+                    {
+                      "type": "cleanup",
+                      "description": "Deleted account: existing_user_1770800362713@test.com"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 14058,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:59:18.815Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "TC-5"
+                        },
+                        {
+                          "type": "cleanup",
+                          "description": "Deleted account: existing_user_1770800362713@test.com"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8c42aaa18f0e06ab6c30-a2f4ad1cf06d43dc5ef3",
+              "file": "tests/signup/signup.spec.ts",
+              "line": 74,
+              "column": 9
+            },
+            {
+              "title": "should prevent signup with empty fields",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "Negative-Empty"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6405,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:59:32.904Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "Negative-Empty"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8c42aaa18f0e06ab6c30-bd8d046b48bf391f585a",
+              "file": "tests/signup/signup.spec.ts",
+              "line": 105,
+              "column": 9
+            },
+            {
+              "title": "should prevent account creation when mandatory fields are missing",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "Negative-MandatoryFields"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5439,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:59:39.337Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "Negative-MandatoryFields"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8c42aaa18f0e06ab6c30-7770f3aca896a4db03dd",
+              "file": "tests/signup/signup.spec.ts",
+              "line": 120,
+              "column": 9
+            },
+            {
+              "title": "should validate email format and reject invalid emails",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "Boundary-EmailFormat"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13923,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:59:44.801Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "Boundary-EmailFormat"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8c42aaa18f0e06ab6c30-74324da9a55a097878c4",
+              "file": "tests/signup/signup.spec.ts",
+              "line": 139,
+              "column": 9
+            },
+            {
+              "title": "should trim whitespace from name input",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "Boundary-Whitespace"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9036,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T08:59:58.766Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "Boundary-Whitespace"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8c42aaa18f0e06ab6c30-54b41f495260e1bd2a1b",
+              "file": "tests/signup/signup.spec.ts",
+              "line": 157,
+              "column": 9
+            },
+            {
+              "title": "should display validation messages for mandatory fields",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "UX-ValidationMessages"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6705,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T09:00:07.836Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "UX-ValidationMessages"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8c42aaa18f0e06ab6c30-301ea63ae3c59695ee80",
+              "file": "tests/signup/signup.spec.ts",
+              "line": 171,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "tests\\user-data\\verify-address.spec.ts",
+      "file": "tests/user-data/verify-address.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Phase 4: User Data & Personalization",
+          "file": "tests/user-data/verify-address.spec.ts",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should verify delivery and billing address details match user registration data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "test-case-id",
+                      "description": "TC-23"
+                    },
+                    {
+                      "type": "cleanup",
+                      "description": "Deleted account: address_verify_1770800421070@test.com"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 20298,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-11T09:00:14.621Z",
+                      "annotations": [
+                        {
+                          "type": "test-case-id",
+                          "description": "TC-23"
+                        },
+                        {
+                          "type": "cleanup",
+                          "description": "Deleted account: address_verify_1770800421070@test.com"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d56e48cca0e8a28afa2c-815ada114a081d0c1ca1",
+              "file": "tests/user-data/verify-address.spec.ts",
+              "line": 48,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-02-11T08:57:08.716Z",
+    "duration": 206613.548,
+    "expected": 27,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

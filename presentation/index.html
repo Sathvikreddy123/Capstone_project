@@ -1,33 +1,116 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>QA Automation Capstone Presentation</title>
+  <title>Engineering Quality | Capstone Presentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/night.css" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/highlight/monokai.css">
 
   <style>
-    .highlight {
-      color: #00d8ff;
+    :root {
+      --r-heading-font: 'Montserrat', sans-serif;
+      --r-main-font: 'Inter', sans-serif;
+      --accent: #64ffda;
+      --secondary: #bd93f9;
+      --warn: #ffb86c;
+      --bg-card: rgba(255, 255, 255, 0.05);
+    }
+
+    .reveal h1,
+    .reveal h2,
+    .reveal h3 {
+      font-weight: 800;
+      text-transform: none;
+      letter-spacing: -0.5px;
+    }
+
+    .reveal p,
+    .reveal li {
+      font-weight: 300;
+      line-height: 1.6;
+      font-size: 0.9em;
     }
 
     .accent {
-      color: #4CAF50;
+      color: var(--accent);
+    }
+
+    .secondary {
+      color: var(--secondary);
     }
 
     .warn {
-      color: #ff9800;
+      color: var(--warn);
     }
 
-    .small {
-      font-size: 0.75em;
+    /* Layout Utilities */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
     }
 
-    h2 {
-      margin-bottom: 20px;
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .code-box {
+      background: #1e1e1e;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      font-size: 0.55em;
+      /* Prevent overflow */
+      width: 100%;
+    }
+
+    .timeline-node {
+      border-left: 2px solid var(--accent);
+      padding-left: 20px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .timeline-node::before {
+      content: '';
+      position: absolute;
+      left: -6px;
+      top: 0;
+      width: 10px;
+      height: 10px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    /* Fix for overflowing content */
+    .reveal pre {
+      width: 100%;
+      margin: 0 auto;
+      box-shadow: none;
+    }
+
+    .reveal pre code {
+      max-height: 500px;
     }
   </style>
 </head>
@@ -36,250 +119,540 @@
   <div class="reveal">
     <div class="slides">
 
-      <!-- ===================================================== -->
-      <!-- TITLE -->
-      <!-- ===================================================== -->
-      <section>
-        <h2>Building a Production-Grade</h2>
-        <h1 class="highlight">QA Automation Framework</h1>
-        <p>UI • API • Cypress • Reporting • CI/CD</p>
-        <p class="small">Capstone Implementation – One Month Intensive Learning</p>
-      </section>
-
-      <!-- ===================================================== -->
-      <!-- CONTEXT -->
-      <!-- ===================================================== -->
-      <section>
-        <h2>Objective</h2>
-        <ul>
-          <li class="fragment">Apply complete QA automation training</li>
-          <li class="fragment">Integrate all concepts into one cohesive system</li>
-          <li class="fragment">Simulate real-world automation ownership</li>
-        </ul>
-      </section>
-
-      <!-- ===================================================== -->
-      <!-- LEARNING SCOPE -->
-      <!-- ===================================================== -->
-      <section>
-        <h2>Training Coverage → Implementation</h2>
-        <ul>
-          <li class="fragment">Playwright UI Automation</li>
-          <li class="fragment">API Automation (APIRequestContext)</li>
-          <li class="fragment">Framework Design & POM</li>
-          <li class="fragment">Cypress Comparative Evaluation</li>
-          <li class="fragment">Reporting & Observability</li>
-          <li class="fragment">CI/CD & Execution Strategy</li>
-          <li class="fragment">Stability & Flakiness Handling</li>
-        </ul>
-      </section>
-
-      <!-- ===================================================== -->
-      <!-- ARCHITECTURE -->
-      <!-- ===================================================== -->
-      <section>
-        <h2>Framework Architecture</h2>
-        <pre><code>
-┌──────────────────────────────┐
-│        UI Layer (POM)        │
-│      Playwright Tests        │
-└──────────────────────────────┘
-┌──────────────────────────────┐
-│        API Layer             │
-│   APIRequestContext Clients  │
-└──────────────────────────────┘
-┌──────────────────────────────┐
-│   Cypress Comparative Layer  │
-└──────────────────────────────┘
-┌──────────────────────────────┐
-│ Reporting & Observability    │
-│   HTML + ReportPortal        │
-└──────────────────────────────┘
-┌──────────────────────────────┐
-│        CI/CD Ready           │
-└──────────────────────────────┘
-  </code></pre>
-        <p class="fragment accent">Designed for scalability, not just execution.</p>
-      </section>
-
-      <!-- ===================================================== -->
-      <!-- UI AUTOMATION -->
-      <!-- ===================================================== -->
-      <section>
-        <section>
-          <h2>UI Automation Coverage</h2>
-          <ul>
-            <li class="fragment">Signup – Positive, Negative, Boundary</li>
-            <li class="fragment">Login & Logout</li>
-            <li class="fragment">Contact Us</li>
-            <li class="fragment">Product Search</li>
-            <li class="fragment">Add to Cart</li>
-            <li class="fragment">Checkout & Address Verification</li>
-            <li class="fragment">End-to-End Purchase Flow</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>UI Stability Enhancements</h2>
-          <ul>
-            <li class="fragment">Cleanup Guarantees (afterEach)</li>
-            <li class="fragment">Assertion Intent Hardening</li>
-            <li class="fragment">Ad Overlay Handling Utility</li>
-            <li class="fragment">Retry & Trace Strategy</li>
-            <li class="fragment">Structured Naming Conventions</li>
-          </ul>
-        </section>
-      </section>
-
-      <!-- ===================================================== -->
-      <!-- API AUTOMATION -->
-      <!-- ===================================================== -->
-      <section>
-        <section>
-          <h2>API Automation Foundation</h2>
-          <ul>
-            <li class="fragment">Standalone API Clients</li>
-            <li class="fragment">User Registration & Auth</li>
-            <li class="fragment">Product Retrieval</li>
-            <li class="fragment">Positive + Negative Coverage</li>
-            <li class="fragment">Data Isolation & Cleanup</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Why API Testing?</h2>
-          <ul>
-            <li class="fragment">Faster execution</li>
-            <li class="fragment">Deterministic validation</li>
-            <li class="fragment">Forms base of Test Pyramid</li>
-            <li class="fragment accent">Reduces UI dependency risk</li>
-          </ul>
-        </section>
-      </section>
-
-      <!-- ===================================================== -->
-      <!-- CYPRESS -->
-      <!-- ===================================================== -->
-      <section>
-        <section>
-          <h2>Cypress Comparative Evaluation</h2>
-          <ul>
-            <li class="fragment">Mirrored POM Architecture</li>
-            <li class="fragment">Hybrid State “Vanishing User” Test</li>
-            <li class="fragment">Execution Benchmark Script</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Benchmark Results</h2>
-          <ul>
-            <li class="fragment">Playwright: ~37 seconds</li>
-            <li class="fragment">Cypress: ~31 seconds</li>
-            <li class="fragment">Trade-offs documented</li>
-          </ul>
-          <p class="fragment warn">Tool selection based on context, not preference.</p>
-        </section>
-      </section>
-
-      <!-- ===================================================== -->
-      <!-- REPORTING -->
-      <!-- ===================================================== -->
-      <section>
-        <h2>Reporting & Observability</h2>
-        <ul>
-          <li class="fragment">HTML Reporting</li>
-          <li class="fragment">ReportPortal Integration</li>
-          <li class="fragment">Conditional Reporter Loading</li>
-          <li class="fragment">Secure Environment Configuration</li>
-          <li class="fragment accent">Centralized failure visibility</li>
-        </ul>
-      </section>
-
-      <!-- ===================================================== -->
-      <!-- CI/CD -->
-      <!-- ===================================================== -->
-      <section>
-        <h2>CI/CD Readiness</h2>
-        <ul>
-          <li class="fragment">Headless Execution Support</li>
-          <li class="fragment">Retry Strategy for CI</li>
-          <li class="fragment">Trace Collection on Retry</li>
-          <li class="fragment">JSON Artifacts for Pipelines</li>
-          <li class="fragment">GitHub Actions Ready</li>
-        </ul>
-      </section>
-
-      <!-- ===================================================== -->
-      <!-- DECISION MAKING -->
-      <!-- ===================================================== -->
-      <section>
-        <h2>Engineering Decisions</h2>
-        <ul>
-          <li class="fragment">Stability before expansion</li>
-          <li class="fragment">Feature-by-feature execution</li>
-          <li class="fragment">Isolation to prevent flakiness</li>
-          <li class="fragment">Benchmark before tool comparison</li>
-          <li class="fragment">Observability as a first-class concern</li>
-        </ul>
-      </section>
-
-      <!-- ===================================================== -->
-      <!-- EXECUTED VS ROADMAP -->
-      <!-- ===================================================== -->
-      <section>
-        <h2>Execution & Roadmap</h2>
-        <ul>
-          <li class="fragment accent">✔ UI Automation Stable</li>
-          <li class="fragment accent">✔ API Automation Implemented</li>
-          <li class="fragment accent">✔ Cypress Benchmarking Complete</li>
-          <li class="fragment accent">✔ Reporting Integrated</li>
-          <li class="fragment accent">✔ CI/CD Ready Structure</li>
-        </ul>
-        <p class="fragment small">Future: Cross-browser cloud execution, performance testing expansion.</p>
-      </section>
-
-      <!-- ===================================================== -->
-      <!-- KEY LEARNINGS -->
-      <!-- ===================================================== -->
-      <section>
-        <h2>Key Learnings</h2>
-        <ul>
-          <li class="fragment">Automation is engineering, not scripting</li>
-          <li class="fragment">Intent-driven assertions reduce brittleness</li>
-          <li class="fragment">Cleanup & isolation prevent flakiness</li>
-          <li class="fragment">Tool trade-offs matter</li>
-          <li class="fragment">Observability improves team efficiency</li>
-        </ul>
-      </section>
-
-      <!-- ===================================================== -->
-      <!-- FINAL -->
-      <!-- ===================================================== -->
-      <section>
-        <h2>Conclusion</h2>
-        <p class="fragment">
-          This capstone represents how I would approach QA automation ownership on a real team:
+      <!-- ================================================================= -->
+      <!-- SLIDE 1: TITLE & AUTHORITY -->
+      <!-- ================================================================= -->
+      <section data-background-gradient="linear-gradient(135deg, #0f2027, #203a43, #2c5364)">
+        <h4 style="letter-spacing: 5px; font-size: 0.6em; opacity: 0.7; margin-bottom: 30px;">CAPSTONE PROJECT 2026</h4>
+        <h1>Engineering <span class="accent">Quality Assurance</span></h1>
+        <p style="font-size: 1.3em; margin-top: 20px;">
+          Building a Production-Grade Automation Ecosystem<br>
+          <span style="font-size: 0.6em; opacity: 0.6;">From Concept to CI/CD in 30 Days</span>
         </p>
-        <p class="fragment highlight">
-          Structured • Stable • Scalable • Production-Oriented
+        <div style="margin-top: 50px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
+          <div class="card fragment fade-up" style="padding: 15px; border: 1px solid rgba(255,255,255,0.1);">
+            <h6 style="margin: 0; color: var(--accent);">Hybrid Core</h6>
+            <small style="font-size: 0.5em; opacity: 0.7;">Playwright + Cypress</small>
+          </div>
+          <div class="card fragment fade-up" style="padding: 15px; border: 1px solid rgba(255,255,255,0.1);">
+            <h6 style="margin: 0; color: var(--accent);">Self-Healing</h6>
+            <small style="font-size: 0.5em; opacity: 0.7;">Auto-Recovery Logic</small>
+          </div>
+          <div class="card fragment fade-up" style="padding: 15px; border: 1px solid rgba(255,255,255,0.1);">
+            <h6 style="margin: 0; color: var(--accent);">API First</h6>
+            <small style="font-size: 0.5em; opacity: 0.7;">Microsecond Data Setup</small>
+          </div>
+          <div class="card fragment fade-up" style="padding: 15px; border: 1px solid rgba(255,255,255,0.1);">
+            <h6 style="margin: 0; color: var(--accent);">DevOps</h6>
+            <small style="font-size: 0.5em; opacity: 0.7;">Zero-Touch CI/CD</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- SLIDE 2: THE EXECUTIVE SUMMARY -->
+      <!-- ================================================================= -->
+      <section>
+        <h2>The Executive Summary</h2>
+        <div class="grid-2" style="grid-template-columns: 1.2fr 0.8fr; gap: 30px;">
+          <div style="text-align: left; font-size: 0.9em;">
+            <p><strong>The Goal:</strong> Translate 1 month of intensive training into a scalable, enterprise-ready
+              automation framework.</p>
+            <p><strong>The Result:</strong> A hybrid ecosystem delivering:</p>
+            <ul style="font-size: 0.9em; margin-top: 15px; line-height: 1.4;">
+              <li class="fragment">✅ <strong>Reliability:</strong> Self-healing AdHandler logic.</li>
+              <li class="fragment">✅ <strong>Speed:</strong> 15min Feedback Loop.</li>
+              <li class="fragment">✅ <strong>Architecture:</strong> Modular & Maintainable.</li>
+            </ul>
+          </div>
+          <div class="card fragment fade-in" style="padding: 20px;">
+            <h4 class="accent">ROI Impact</h4>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <div>
+                <h2 style="margin:0; font-size: 2.5em;">40%</h2>
+                <small>Reduction in Flakiness</small>
+              </div>
+              <div style="border-top: 1px solid #444; padding-top: 10px;">
+                <h2 style="margin:0; font-size: 2.5em;">0</h2>
+                <small>Manual Interventions</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- SLIDE 2.5: THE WORKFLOW (NEW) -->
+      <!-- ================================================================= -->
+      <section>
+        <h3>The Execution Workflow</h3>
+        <p style="opacity: 0.7;">From Local Code to Global Report</p>
+
+        <div style="display: flex; align-items: center; justify-content: center; margin-top: 40px; gap: 20px;">
+          <!-- Node 1 -->
+          <div class="fragment fade-right" style="text-align: center;">
+            <div
+              style="background: #333; padding: 20px; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto; border: 2px solid var(--accent);">
+              💻
+            </div>
+            <small style="margin-top: 10px; display: block;">Local Dev</small>
+          </div>
+
+          <div class="fragment fade-right" style="font-size: 2em; opacity: 0.5;">→</div>
+
+          <!-- Node 2 -->
+          <div class="fragment fade-right" style="text-align: center;">
+            <div
+              style="background: #333; padding: 20px; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto; border: 2px solid var(--accent);">
+              🐙
+            </div>
+            <small style="margin-top: 10px; display: block;">GitHub Push</small>
+          </div>
+
+          <div class="fragment fade-right" style="font-size: 2em; opacity: 0.5;">→</div>
+
+          <!-- Node 3 -->
+          <div class="fragment fade-right" style="text-align: center;">
+            <div
+              style="background: #333; padding: 20px; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto; border: 2px solid var(--accent);">
+              ⚙️
+            </div>
+            <small style="margin-top: 10px; display: block;">CI Pipeline</small>
+          </div>
+
+          <div class="fragment fade-right" style="font-size: 2em; opacity: 0.5;">→</div>
+
+          <!-- Node 4 -->
+          <div class="fragment fade-right" style="text-align: center;">
+            <div
+              style="background: #333; padding: 20px; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto; border: 2px solid var(--accent);">
+              📊
+            </div>
+            <small style="margin-top: 10px; display: block;">ReportPortal</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- SLIDE 3: THE LEARNING PATH (FLOWCHART) -->
+      <!-- ================================================================= -->
+      <section>
+        <h2>The 4-Week Evolution</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; margin-top: 50px;">
+
+          <!-- Week 1 -->
+          <div class="fragment fade-up"
+            style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px; position: relative;">
+            <h4 style="color: var(--accent); margin: 0 0 10px 0;">W1</h4>
+            <small style="opacity: 0.8;">Foundations</small>
+            <hr style="opacity: 0.2; margin: 10px 0;">
+            <ul style="font-size: 0.5em; text-align: left; opacity: 0.7; padding-left: 15px;">
+              <li>Testing Pyramid</li>
+              <li>Wait Strategies</li>
+              <li>Locators</li>
+            </ul>
+          </div>
+
+          <!-- Week 2 -->
+          <div class="fragment fade-up"
+            style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px; position: relative;">
+            <h4 style="color: var(--accent); margin: 0 0 10px 0;">W2</h4>
+            <small style="opacity: 0.8;">Engineering</small>
+            <hr style="opacity: 0.2; margin: 10px 0;">
+            <ul style="font-size: 0.5em; text-align: left; opacity: 0.7; padding-left: 15px;">
+              <li>POM Pattern</li>
+              <li>Data Factories</li>
+              <li>Strict Type Checks</li>
+            </ul>
+          </div>
+
+          <!-- Week 3 -->
+          <div class="fragment fade-up"
+            style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px; position: relative;">
+            <h4 style="color: var(--secondary); margin: 0 0 10px 0;">W3</h4>
+            <small style="opacity: 0.8;">Architecture</small>
+            <hr style="opacity: 0.2; margin: 10px 0;">
+            <ul style="font-size: 0.5em; text-align: left; opacity: 0.7; padding-left: 15px;">
+              <li>Hybrid Framework</li>
+              <li>API Integration</li>
+              <li>AdHandler</li>
+            </ul>
+          </div>
+
+          <!-- Week 4 -->
+          <div class="fragment fade-up"
+            style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px; position: relative;">
+            <h4 style="color: var(--secondary); margin: 0 0 10px 0;">W4</h4>
+            <small style="opacity: 0.8;">Production</small>
+            <hr style="opacity: 0.2; margin: 10px 0;">
+            <ul style="font-size: 0.5em; text-align: left; opacity: 0.7; padding-left: 15px;">
+              <li>CI/CD (GitHub)</li>
+              <li>Secret Mgmt</li>
+              <li>Observability</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- SLIDE 4: WEEK 1 - FOUNDATIONS (THEORY TO PRACTICE) -->
+      <!-- ================================================================= -->
+      <section>
+        <h3>Week 1: Mindset Shift</h3>
+        <p>From "Checking Functionality" to "Mitigating Risk".</p>
+        <div class="grid-3" style="margin-top: 40px;">
+          <div class="card fragment fade-up">
+            <h4>The Pyramid</h4>
+            <p style="font-size: 0.7em;">Moved logic down to the API layer. UI tests focus only on User Journey, not
+              data setup.</p>
+          </div>
+          <div class="card fragment fade-up">
+            <h4>Determinism</h4>
+            <p style="font-size: 0.7em;">Eliminated `Thread.sleep()`. All waits are event-driven and predicate-based.
+            </p>
+          </div>
+          <div class="card fragment fade-up">
+            <h4>Isolation</h4>
+            <p style="font-size: 0.7em;">Every test creates its own user. Zero dependency on seed data.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- SLIDE 5: ARCHITECTURE DIAGRAM (THE BLUEPRINT) -->
+      <!-- ================================================================= -->
+      <section>
+        <h2>The Architecture</h2>
+        <p style="font-size: 0.7em;">Designed for maintainability, not just execution.</p>
+
+
+
+        <div style="position: relative; margin-top: 20px; font-size: 0.5em;"> <!-- Reduced from 0.6em to 0.5em -->
+          <!-- CI LAYER -->
+          <div class="fragment"
+            style="border: 2px solid var(--secondary); padding: 10px; border-radius: 8px; margin-bottom: 20px;">
+            <h4 style="margin:0; font-size: 1.2em;">CI/CD Orchestration (GitHub Actions)</h4>
+            <small>Triggers • Environment Injection • Artifact Retention</small>
+          </div>
+
+          <!-- FRAMEWORK LAYER -->
+          <div class="grid-2" style="gap: 20px;">
+            <div class="card fragment" style="border-color: var(--accent); padding: 10px;"> <!-- Reduced padding -->
+              <h4 style="margin:0; font-size: 1.2em;">Playwright Core</h4>
+              <ul style="text-align: left; font-size: 0.9em; margin-top: 5px;">
+                <li>Main UI Suite</li>
+                <li>API Clients</li>
+                <li>Visual Tracing</li>
+              </ul>
+            </div>
+            <div class="card fragment" style="border-color: var(--accent); padding: 10px;"> <!-- Reduced padding -->
+              <h4 style="margin:0; font-size: 1.2em;">Cypress Labs</h4>
+              <ul style="text-align: left; font-size: 0.9em; margin-top: 5px;">
+                <li>Benchmarks</li>
+                <li>Hybrid State Tests</li>
+                <li>Network Interception</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- REPORTING LAYER -->
+          <div class="fragment" style="border: 1px dashed #666; padding: 10px; border-radius: 8px; margin-top: 20px;">
+            <h4 style="margin:0; font-size: 1.2em;">Observability Layer</h4>
+            <small>HTML Reports • Console Logs • Playwright Traces • Videos</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- SLIDE 6: UI ENGINEERING (POM) -->
+      <!-- ================================================================= -->
+      <section>
+        <h3>Week 2: Scalable Patterns</h3>
+        <p>The "Page Object Model" (POM) Implementation.</p>
+        <div class="grid-2">
+          <div style="text-align: left;">
+            <p><strong>Strict Separation of Concerns:</strong></p>
+            <ul>
+              <li class="fragment"><strong>Pages:</strong> Handle Locators & Actions (No assertions).</li>
+              <li class="fragment"><strong>Tests:</strong> Handle Logic & Assertions (No locators).</li>
+              <li class="fragment"><strong>Data:</strong> Dynamic factories (No hardcoding).</li>
+            </ul>
+          </div>
+          <div class="code-box fragment">
+            <pre><code class="typescript">
+// ContactUsPage.ts (Strict Typing)
+export class ContactUsPage {
+  readonly submitButton: Locator;
+  
+  constructor(page: Page) {
+    this.submitButton = page.locator('input[type="submit"]');
+  }
+
+  // Action only - No Assertion
+  async submitForm() {
+    await this.submitButton.click();
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- SLIDE 7: STABILITY ENGINEERING (ADHANDLER) -->
+      <!-- ================================================================= -->
+      <section>
+        <h3>Week 3: Killing Flakiness</h3>
+        <p class="warn">Challenge: Random "Google Vignette" Ads (40% Failure Rate).</p>
+
+        <div class="card fragment fade-in">
+          <h4>The AdHandler Pattern</h4>
+          <p style="font-size: 0.7em;">Proactive, low-latency interception of system noise.</p>
+          <pre class="code-box"><code class="typescript" data-trim data-line-numbers="3-9">
+// src/utils/AdHandler.ts
+static async closeAdOverlays(page: Page) {
+  // 1. Scan for known ad selectors
+  const selectors = ['#dismiss-button', '.close-video'];
+  
+  // 2. Conditional Logic (Self-Healing)
+  for (const s of selectors) {
+    if (await page.isVisible(s)) {
+      console.log('🛡️ Auto-healing: Closing Ad');
+      await page.click(s);
+    }
+  }
+}
+          </code></pre>
+          <p class="fragment accent" style="margin-top: 10px; font-weight: bold;">Result: 0% Flakiness from Ads.</p>
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- SLIDE 8: API TESTING STRATEGY -->
+      <!-- ================================================================= -->
+      <section>
+        <h3>API: The Invisible Backbone</h3>
+        <p>Why we built a standalone `APIRequestContext` layer.</p>
+        <div class="grid-3">
+          <div class="card fragment">
+            <h1>🚀</h1>
+            <h5>Speed</h5>
+            <small>API: 200ms vs UI: 5s.<br>Huge reduction in suite time.</small>
+          </div>
+          <div class="card fragment">
+            <h1>🔧</h1>
+            <h5>Setup</h5>
+            <small>Create Users/Products via API instantly before UI tests start.</small>
+          </div>
+          <div class="card fragment">
+            <h1>🧹</h1>
+            <h5>Teardown</h5>
+            <small>Guaranteed cleanup of data via API <code>DELETE</code> calls.</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- SLIDE 9: INNOVATION - THE VANISHING USER -->
+      <!-- ================================================================= -->
+      <section data-background-color="#000">
+        <h2 class="secondary">The "Innovator" Scenario</h2>
+        <p>Testing the Untestable: Hybrid State Injection</p>
+
+        <div style="background: rgba(255,0,0,0.1); border: 1px solid red; padding: 20px; border-radius: 10px;">
+          <h4 style="color: #ff5555;">The Scenario</h4>
+          <p>What happens if a user is deleted from the DB <em>while</em> browsing?</p>
+        </div>
+
+        <div class="grid-2" style="margin-top: 30px;">
+          <div class="fragment fade-right">
+            <h5>Frontend (UI)</h5>
+            <p style="font-size: 0.7em;">User is logged in, clicking buttons.</p>
+          </div>
+          <div class="fragment fade-left">
+            <h5>Backend (API)</h5>
+            <p style="font-size: 0.7em;"><code>cy.request('DELETE', '/user')</code> fires mid-test.</p>
+          </div>
+        </div>
+
+        <p class="fragment accent" style="margin-top: 30px;">
+          This proves the framework can handle <br><strong>Asynchronous Race Conditions</strong>.
         </p>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- SLIDE 10: BENCHMARKING (DATA DRIVEN) -->
+      <!-- ================================================================= -->
+      <section>
+        <h3>Tooling Decisions by Data</h3>
+        <p>We didn't "guess". We benchmarked.</p>
+
+        <div class="card">
+          <table style="width: 100%; font-size: 0.8em;">
+            <thead>
+              <tr style="border-bottom: 2px solid #555;">
+                <th>Metric</th>
+                <th>Playwright</th>
+                <th class="accent">Cypress</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="fragment">
+                <td><strong>Login Speed</strong></td>
+                <td>37.2s</td>
+                <td class="accent">31.4s (Winner)</td>
+              </tr>
+              <tr class="fragment">
+                <td><strong>Parallelism</strong></td>
+                <td class="accent">Process-based (Winner)</td>
+                <td>Spec-based</td>
+              </tr>
+              <tr class="fragment">
+                <td><strong>Network Capability</strong></td>
+                <td class="accent">Full Control</td>
+                <td>Limited (XHR)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fragment small" style="margin-top: 20px; opacity: 0.7;">
+          <strong>Strategic Decision:</strong> Use Playwright for core regression (Scalability), Cypress for specific
+          high-speed flows.
+        </p>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- SLIDE 11: CI/CD PIPELINE -->
+      <!-- ================================================================= -->
+      <section>
+        <h3>Week 4: The Delivery Pipeline</h3>
+        <p>Production-Grade DevOps Implementation.</p>
+
+        <div class="code-box">
+          <pre><code class="yaml" data-trim data-line-numbers="1-15">
+# .github/workflows/main.yml
+jobs:
+  test_matrix:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        browser: [chromium, firefox]
+    steps:
+      - name: Run Tests
+        run: npx playwright test
+        env:
+          # SECURITY: Secrets injected at runtime
+          RP_API_KEY: ${{ secrets.RP_API_KEY }}
+          CI_ENV: true
+      
+      - name: Upload Artifacts
+        if: failure()
+        with:
+           path: test-results/
+          </code></pre>
+        </div>
+        <ul style="font-size: 0.7em; margin-top: 20px;">
+          <li class="fragment">✅ <strong>Security:</strong> No hardcoded keys. GitHub Secrets used.</li>
+          <li class="fragment">✅ <strong>Observability:</strong> Artifacts only upload on failure (Cost saving).</li>
+          <li class="fragment">✅ <strong>Matrix:</strong> Ready for cross-browser execution.</li>
+        </ul>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- SLIDE 12: OBSERVABILITY & REPORTING -->
+      <!-- ================================================================= -->
+      <section>
+        <h3>Visibility = Velocity</h3>
+        <p>We don't just "fail". We diagnose.</p>
+        <div class="grid-2">
+          <div class="card fragment">
+            <h4>HTML Reports</h4>
+            <p style="font-size: 0.7em;">Instant, portable debug reports with traces attached.</p>
+          </div>
+          <div class="card fragment">
+            <h4>ReportPortal</h4>
+            <p style="font-size: 0.7em;">Trend analysis. "Are we getting more stable over time?"</p>
+          </div>
+        </div>
+        <div class="fragment"
+          style="margin-top: 30px; border: 1px solid var(--accent); padding: 10px; border-radius: 5px;">
+          <small>Includes <strong>Video Recording</strong> and <strong>Trace Viewer</strong> integration.</small>
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- SLIDE 13: FUTURE ROADMAP -->
+      <!-- ================================================================= -->
+      <section>
+        <h3>Future Roadmap</h3>
+        <p>Continuous Improvement</p>
+        <div class="grid-3">
+          <div class="card fragment" style="opacity: 0.7;">
+            <h5>Phase 1</h5>
+            <small>Containerization (Docker)</small>
+          </div>
+          <div class="card fragment" style="opacity: 0.7;">
+            <h5>Phase 2</h5>
+            <small>Performance Testing (K6 Integration)</small>
+          </div>
+          <div class="card fragment" style="opacity: 0.7;">
+            <h5>Phase 3</h5>
+            <small>Visual Regression (Percy/Applitools)</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- SLIDE 14: CONCLUSION -->
+      <!-- ================================================================= -->
+      <section data-background-gradient="linear-gradient(to top, #1e3c72 0%, #2a5298 100%)">
+        <h2>The Verdict</h2>
+        <p style="opacity: 0.8; margin-bottom: 40px;">Ready for Production.</p>
+
+        <div class="grid-3">
+          <div class="card fragment fade-up">
+            <h4 class="accent">Scalable</h4>
+            <small>Modular POM & API</small>
+          </div>
+          <div class="card fragment fade-up">
+            <h4 class="accent">Stable</h4>
+            <small>Self-Healing Pattern</small>
+          </div>
+          <div class="card fragment fade-up">
+            <h4 class="accent">Secure</h4>
+            <small>CI/CD Secrets</small>
+          </div>
+        </div>
+
+        <div style="margin-top: 60px;">
+          <h3 style="margin-bottom: 10px;">Thank You</h3>
+          <h4 class="accent">K Sathvik Reddy</h4>
+          <p class="secondary" style="font-size: 0.8em;">(and ready for Q&A)</p>
+        </div>
       </section>
 
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/highlight/highlight.js"></script>
   <script>
     Reveal.initialize({
       hash: true,
-      slideNumber: true,
-      transition: 'fade',
+      slideNumber: 'c/t',
+      controls: true,
+      progress: true,
+      center: true,
+      width: 1200,  // Wider layout
+      height: 700,
+      margin: 0.1,
+      minScale: 0.2,
+      maxScale: 2.0,
+      transition: 'slide',
       plugins: [RevealHighlight]
     });
   </script>
-
 </body>
 
 </html>

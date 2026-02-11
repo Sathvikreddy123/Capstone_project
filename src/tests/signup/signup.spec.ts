@@ -140,9 +140,10 @@ test.describe('Signup Feature', () => {
         testInfo.annotations.push({ type: 'test-case-id', description: 'Boundary-EmailFormat' });
         const invalidEmails = ['plainaddress', '#@%^%#$@#$@#.com', '@example.com', 'Joe Smith <email@example.com>', 'email.example.com', 'email@example@example.com'];
 
+        await signupPage.goto();
+        await signupPage.navigateToSignupLogin();
+
         for (const email of invalidEmails) {
-            await signupPage.goto();
-            await signupPage.navigateToSignupLogin();
             await signupPage.signup('Test User', email);
 
             // Should verify validation error or that we didn't proceed

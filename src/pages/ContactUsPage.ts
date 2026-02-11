@@ -62,14 +62,10 @@ export class ContactUsPage {
         await this.page.waitForLoadState('domcontentloaded');
 
         // Wait for success message text to appear (more reliable than visibility check)
-        await this.page.waitForFunction(() => {
-            const element = document.querySelector('.status.alert.alert-success');
-            return element && element.textContent && element.textContent.includes('Success');
-        }, { timeout: 15000 });
+        await expect(this.successMessage).toBeVisible({ timeout: 15000 });
+        await expect(this.successMessage).toHaveText('Success! Your details have been submitted successfully.', { timeout: 15000 });
 
-        await expect(this.successMessage).toBeVisible();
-        await expect(this.successMessage).toHaveText('Success! Your details have been submitted successfully.');
         await this.homeButton.click();
-        await expect(this.page.url()).toBe('https://automationexercise.com/'); // Verify home
+        await expect(this.page).toHaveURL(/https:\/\/automationexercise\.com\/?(#.*)?/); // Verify home (allow vignettes)
     }
 }
