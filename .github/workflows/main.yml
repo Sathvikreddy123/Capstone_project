@@ -9,54 +9,78 @@ on:
 
 jobs:
   playwright-tests:
+    name: Playwright Tests
     timeout-minutes: 60
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 18
-    - name: Install dependencies
-      run: npm ci
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: npx playwright test
-      env:
-        CI: true
-        RP_API_KEY: ${{ secrets.RP_API_KEY }}
-        RP_ENDPOINT: ${{ secrets.RP_ENDPOINT }}
-        RP_PROJECT: ${{ secrets.RP_PROJECT }}
-        RP_LAUNCH: "CI_Run_${{ github.run_number }}"
-    - uses: actions/upload-artifact@v3
-      if: always()
-      with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright Tests
+        run: npx playwright test
+        env:
+          CI: true
+          RP_API_KEY: ${{ secrets.RP_API_KEY }}
+          RP_ENDPOINT: ${{ secrets.RP_ENDPOINT }}
+          RP_PROJECT: ${{ secrets.RP_PROJECT }}
+          RP_LAUNCH: CI_Run_${{ github.run_number }}
+
+      - name: Upload Playwright Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
 
   cypress-tests:
+    name: Cypress Tests
     timeout-minutes: 60
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Cypress run
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
           headless: true
-          start: npm run test:cy
-          wait-on: 'http://localhost:3000' # Optional if serving app
-          wait-on-timeout: 120
           command: npm run test:cy
-      - uses: actions/upload-artifact@v3
+
+      - name: Upload Cypress Screenshots
         if: failure()
+        uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
           path: cypress/screenshots
-      - uses: actions/upload-artifact@v3
+
+      - name: Upload Cypress Videos
         if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
           path: cypress/videos
