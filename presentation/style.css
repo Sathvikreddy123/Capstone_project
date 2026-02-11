@@ -1,0 +1,12 @@
+@import 'reveal.js/dist/reveal.css';
+@import 'reveal.js/dist/theme/black.css';
+
+/* Custom styles can go here */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  text-transform: none; /* easier to read */
+}

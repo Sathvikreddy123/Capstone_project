@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>QA Automation Capstone Presentation</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/monokai.css">
+
+  <style>
+    .highlight {
+      color: #00d8ff;
+    }
+
+    .accent {
+      color: #4CAF50;
+    }
+
+    .warn {
+      color: #ff9800;
+    }
+
+    .small {
+      font-size: 0.75em;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ===================================================== -->
+      <!-- TITLE -->
+      <!-- ===================================================== -->
+      <section>
+        <h2>Building a Production-Grade</h2>
+        <h1 class="highlight">QA Automation Framework</h1>
+        <p>UI • API • Cypress • Reporting • CI/CD</p>
+        <p class="small">Capstone Implementation – One Month Intensive Learning</p>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- CONTEXT -->
+      <!-- ===================================================== -->
+      <section>
+        <h2>Objective</h2>
+        <ul>
+          <li class="fragment">Apply complete QA automation training</li>
+          <li class="fragment">Integrate all concepts into one cohesive system</li>
+          <li class="fragment">Simulate real-world automation ownership</li>
+        </ul>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- LEARNING SCOPE -->
+      <!-- ===================================================== -->
+      <section>
+        <h2>Training Coverage → Implementation</h2>
+        <ul>
+          <li class="fragment">Playwright UI Automation</li>
+          <li class="fragment">API Automation (APIRequestContext)</li>
+          <li class="fragment">Framework Design & POM</li>
+          <li class="fragment">Cypress Comparative Evaluation</li>
+          <li class="fragment">Reporting & Observability</li>
+          <li class="fragment">CI/CD & Execution Strategy</li>
+          <li class="fragment">Stability & Flakiness Handling</li>
+        </ul>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- ARCHITECTURE -->
+      <!-- ===================================================== -->
+      <section>
+        <h2>Framework Architecture</h2>
+        <pre><code>
+┌──────────────────────────────┐
+│        UI Layer (POM)        │
+│      Playwright Tests        │
+└──────────────────────────────┘
+┌──────────────────────────────┐
+│        API Layer             │
+│   APIRequestContext Clients  │
+└──────────────────────────────┘
+┌──────────────────────────────┐
+│   Cypress Comparative Layer  │
+└──────────────────────────────┘
+┌──────────────────────────────┐
+│ Reporting & Observability    │
+│   HTML + ReportPortal        │
+└──────────────────────────────┘
+┌──────────────────────────────┐
+│        CI/CD Ready           │
+└──────────────────────────────┘
+  </code></pre>
+        <p class="fragment accent">Designed for scalability, not just execution.</p>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- UI AUTOMATION -->
+      <!-- ===================================================== -->
+      <section>
+        <section>
+          <h2>UI Automation Coverage</h2>
+          <ul>
+            <li class="fragment">Signup – Positive, Negative, Boundary</li>
+            <li class="fragment">Login & Logout</li>
+            <li class="fragment">Contact Us</li>
+            <li class="fragment">Product Search</li>
+            <li class="fragment">Add to Cart</li>
+            <li class="fragment">Checkout & Address Verification</li>
+            <li class="fragment">End-to-End Purchase Flow</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>UI Stability Enhancements</h2>
+          <ul>
+            <li class="fragment">Cleanup Guarantees (afterEach)</li>
+            <li class="fragment">Assertion Intent Hardening</li>
+            <li class="fragment">Ad Overlay Handling Utility</li>
+            <li class="fragment">Retry & Trace Strategy</li>
+            <li class="fragment">Structured Naming Conventions</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- API AUTOMATION -->
+      <!-- ===================================================== -->
+      <section>
+        <section>
+          <h2>API Automation Foundation</h2>
+          <ul>
+            <li class="fragment">Standalone API Clients</li>
+            <li class="fragment">User Registration & Auth</li>
+            <li class="fragment">Product Retrieval</li>
+            <li class="fragment">Positive + Negative Coverage</li>
+            <li class="fragment">Data Isolation & Cleanup</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Why API Testing?</h2>
+          <ul>
+            <li class="fragment">Faster execution</li>
+            <li class="fragment">Deterministic validation</li>
+            <li class="fragment">Forms base of Test Pyramid</li>
+            <li class="fragment accent">Reduces UI dependency risk</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- CYPRESS -->
+      <!-- ===================================================== -->
+      <section>
+        <section>
+          <h2>Cypress Comparative Evaluation</h2>
+          <ul>
+            <li class="fragment">Mirrored POM Architecture</li>
+            <li class="fragment">Hybrid State “Vanishing User” Test</li>
+            <li class="fragment">Execution Benchmark Script</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Benchmark Results</h2>
+          <ul>
+            <li class="fragment">Playwright: ~37 seconds</li>
+            <li class="fragment">Cypress: ~31 seconds</li>
+            <li class="fragment">Trade-offs documented</li>
+          </ul>
+          <p class="fragment warn">Tool selection based on context, not preference.</p>
+        </section>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- REPORTING -->
+      <!-- ===================================================== -->
+      <section>
+        <h2>Reporting & Observability</h2>
+        <ul>
+          <li class="fragment">HTML Reporting</li>
+          <li class="fragment">ReportPortal Integration</li>
+          <li class="fragment">Conditional Reporter Loading</li>
+          <li class="fragment">Secure Environment Configuration</li>
+          <li class="fragment accent">Centralized failure visibility</li>
+        </ul>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- CI/CD -->
+      <!-- ===================================================== -->
+      <section>
+        <h2>CI/CD Readiness</h2>
+        <ul>
+          <li class="fragment">Headless Execution Support</li>
+          <li class="fragment">Retry Strategy for CI</li>
+          <li class="fragment">Trace Collection on Retry</li>
+          <li class="fragment">JSON Artifacts for Pipelines</li>
+          <li class="fragment">GitHub Actions Ready</li>
+        </ul>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- DECISION MAKING -->
+      <!-- ===================================================== -->
+      <section>
+        <h2>Engineering Decisions</h2>
+        <ul>
+          <li class="fragment">Stability before expansion</li>
+          <li class="fragment">Feature-by-feature execution</li>
+          <li class="fragment">Isolation to prevent flakiness</li>
+          <li class="fragment">Benchmark before tool comparison</li>
+          <li class="fragment">Observability as a first-class concern</li>
+        </ul>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- EXECUTED VS ROADMAP -->
+      <!-- ===================================================== -->
+      <section>
+        <h2>Execution & Roadmap</h2>
+        <ul>
+          <li class="fragment accent">✔ UI Automation Stable</li>
+          <li class="fragment accent">✔ API Automation Implemented</li>
+          <li class="fragment accent">✔ Cypress Benchmarking Complete</li>
+          <li class="fragment accent">✔ Reporting Integrated</li>
+          <li class="fragment accent">✔ CI/CD Ready Structure</li>
+        </ul>
+        <p class="fragment small">Future: Cross-browser cloud execution, performance testing expansion.</p>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- KEY LEARNINGS -->
+      <!-- ===================================================== -->
+      <section>
+        <h2>Key Learnings</h2>
+        <ul>
+          <li class="fragment">Automation is engineering, not scripting</li>
+          <li class="fragment">Intent-driven assertions reduce brittleness</li>
+          <li class="fragment">Cleanup & isolation prevent flakiness</li>
+          <li class="fragment">Tool trade-offs matter</li>
+          <li class="fragment">Observability improves team efficiency</li>
+        </ul>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- FINAL -->
+      <!-- ===================================================== -->
+      <section>
+        <h2>Conclusion</h2>
+        <p class="fragment">
+          This capstone represents how I would approach QA automation ownership on a real team:
+        </p>
+        <p class="fragment highlight">
+          Structured • Stable • Scalable • Production-Oriented
+        </p>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js"></script>
+
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      transition: 'fade',
+      plugins: [RevealHighlight]
+    });
+  </script>
+
+</body>
+
+</html>

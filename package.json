@@ -1,0 +1,26 @@
+{
+  "name": "project_final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:cy": "npx cypress run",
+    "test:cy:headed": "npx cypress open",
+    "test:benchmark": "node scripts/benchmark.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "^7.0.2",
+    "@playwright/test": "^1.58.2",
+    "@reportportal/agent-js-playwright": "^5.4.0",
+    "@types/node": "^25.2.2",
+    "cypress": "^15.10.0",
+    "dotenv": "^17.2.4",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3"
+  }
+}
